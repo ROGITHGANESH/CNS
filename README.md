@@ -113,6 +113,7 @@ int main() {
 
 
 OUTPUT :-
+
 ![Screenshot (5)](https://github.com/kanmanikannu/CNS/assets/114866367/655f13b6-8505-4013-8d14-6fab04a9856c)
 
 RESULT :
