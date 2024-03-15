@@ -28,7 +28,94 @@ becomes C. To change a message back, each letter is replaced by the one three be
 
 
 PROGRAM :-
+#include <stdio.h>
+#include <string.h>
+
+// Function to perform Caesar cipher encryption
+void encrypt(char message[], int key) {
+    int i;
+    char ch;
+    
+    for(i = 0; message[i] != '\0'; ++i) {
+        ch = message[i];
+        
+        if(ch >= 'a' && ch <= 'z') {
+            ch = ch + key;
+            
+            if(ch > 'z') {
+                ch = ch - 'z' + 'a' - 1;
+            }
+            
+            message[i] = ch;
+        }
+        else if(ch >= 'A' && ch <= 'Z') {
+            ch = ch + key;
+            
+            if(ch > 'Z') {
+                ch = ch - 'Z' + 'A' - 1;
+            }
+            
+            message[i] = ch;
+        }
+    }
+}
+
+// Function to perform Caesar cipher decryption
+void decrypt(char message[], int key) {
+    int i;
+    char ch;
+    
+    for(i = 0; message[i] != '\0'; ++i) {
+        ch = message[i];
+        
+        if(ch >= 'a' && ch <= 'z') {
+            ch = ch - key;
+            
+            if(ch < 'a') {	
+                ch = ch + 'z' - 'a' + 1;
+            }
+            
+            message[i] = ch;
+        }
+        else if(ch >= 'A' && ch <= 'Z') {
+            ch = ch - key;
+            
+            if(ch < 'A') {
+                ch = ch + 'Z' - 'A' + 1;
+            }
+            
+            message[i] = ch;
+        }
+    }
+}
+
+int main() {
+    char message[100];
+    int key;
+    
+    printf("Enter a message: ");
+    gets(message); // Input message
+    
+    printf("Enter key: ");
+    scanf("%d", &key); // Input key
+    
+    // Encrypt the message
+    encrypt(message, key);
+    printf("Encrypted message: %s\n", message);
+    
+    // Decrypt the message
+    decrypt(message, key);
+    printf("Decrypted message: %s\n", message);
+    
+    return 0;
+}
 
 
 
 OUTPUT :-
+![Screenshot (5)](https://github.com/kanmanikannu/CNS/assets/114866367/655f13b6-8505-4013-8d14-6fab04a9856c)
+
+RESULT :
+Thus, encryption and decryption of the given message by using Ceaser Cipher encryption algorithm is implemented successfully.
+
+
