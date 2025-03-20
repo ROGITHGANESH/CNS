@@ -1,4 +1,4 @@
-## EX. NO: 1(A) : IMPLEMENTATION OF CAESAR CIPHER
+## EX. NO: 1 : IMPLEMENTATION OF CAESAR CIPHER
  
 
 ## AIM:
@@ -11,9 +11,8 @@ To encrypt a message with a Caesar cipher, each letter in the message is changed
 alphabet as a circle and "wrap around". W becomes Z, X becomes A, Y bec mes B, and Z
 becomes C. To change a message back, each letter is replaced by the one three before it.
 
+
 ## EXAMPLE:
-
-
 
 ![image](https://github.com/Hemamanigandan/CNS/assets/149653568/eb9c6c43-8c80-4cdd-b9d4-91705a311c79)
 
@@ -27,7 +26,7 @@ becomes C. To change a message back, each letter is replaced by the one three be
 ### STEP-5: Display the cipher text obtained above.
 
 
-PROGRAM :-
+## PROGRAM :-
 #include <stdio.h>
 #include <string.h>
 
@@ -112,11 +111,11 @@ int main() {
 
 
 
-OUTPUT :-
+## OUTPUT :-
 
 ![Screenshot (5)](https://github.com/kanmanikannu/CNS/assets/114866367/655f13b6-8505-4013-8d14-6fab04a9856c)
 
-RESULT :
+## RESULT :
 Thus, encryption and decryption of the given message by using Ceaser Cipher encryption algorithm is implemented successfully.
 
 
